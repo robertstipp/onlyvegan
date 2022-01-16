@@ -11,9 +11,9 @@ function App() {
 
   return (
     <main>
-      <h1>Only Vegan</h1>
-      <section className="photos">
-        <div className="photos-center">
+      <header className="header">Only Vegans</header>
+      <section className="recipes">
+        <div className="recipes-center">
           {recipes.map((recipe) => {
             const {
               id,
@@ -24,20 +24,13 @@ function App() {
               sourceUrl: url,
             } = recipe;
             return (
-              <article classname="photo" key={id}>
+              <article className="recipe" key={id}>
                 <img src={image} alt={title} />
-                <div className="photo-info">
+                <div className="recipe-info">
                   <a href={url} target="_blank" rel="noopener noreferrer">
                     <h2>{title}</h2>
                   </a>
-
                   <h3>Likes: {likes}</h3>
-                  <h3>Diets:</h3>
-                  <ul>
-                    {diets.map((diet) => {
-                      return <li>{diet}</li>;
-                    })}
-                  </ul>
                 </div>
               </article>
             );

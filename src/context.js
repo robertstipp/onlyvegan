@@ -12,7 +12,7 @@ import {
 import reducer from "./reducer";
 const API_KEY = "a2a3f8006cc14f47906ec3a940c9a6d6";
 
-const API_ENDPOINT = `https://api.spoonacular.com/recipes/random?number=2&apiKey=${API_KEY}&tags=vegan`;
+const API_ENDPOINT = `https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}&tags=vegan`;
 
 const initialState = {
   isLoading: true,
